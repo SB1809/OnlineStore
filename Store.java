@@ -23,5 +23,42 @@
 */
 public class Store
 {
+  double profit;
+  ArrayList<ItemForSale> items = new ArrayList<>();
+    public Store(){
+      profit = 0.0;
+    }
+
+    public void showItems(){
+      for(int i = 0; i < items.size(); i++){
+          System.out.println(item.get(i).getTitle);
+      }
+    }
+
+    public void addItem(ItemForSale item){
+      items.add(item);
+      for(int i = 0; i < items.size(); i++){
+        if(items.get(i).getTitle().compareTo(item.getTitle()) > 0){
+          items.remove(item)
+          items.add(i, item);
+        }
+      }
+    }
+    public void sellItem(String itemName){
+      for(int i = 0; i < items.size(); i++){
+        if(items.get(i).getCreator().getName().equals(item)){
+          double temp = items.get(i).getPrice();
+          items.remove(i);
+          profit += temp;
+        }
+      }
+    }
+    public void creator(String itemName){
+      for(int i = 0; i < items.size(); i++){
+        if(items.get(i).getTitle).equals(item)){
+          System.out.println(items.get(i).getCreator().getName());
+        }
+      }
+    }
 
 }
