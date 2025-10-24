@@ -11,6 +11,6 @@ public class Main
          s.creator("Osamu Dazai");
          s.addItem(new Movie("Inception", new Author("Christopher Nolan", "July 30, 1970"), "2010", 12.00, 148));
          s.creator("Christopher Nolan");
-        System.out.println(b instanceof ItemForSale);
+        
      }
 }
