@@ -1,41 +1,22 @@
-
+//Sophia Babayev, 10/21/2025, Represents a book item for sale in the store
 public class Book extends ItemForSale
 {
-    private String title;
-    private String releaseDay;
-    private Author creator;
+   
     private String publisher;
-    private double price;
 
     public Book(String title, String releaseDay, Author creator, String publisher, double price){
-        this.title = title;
-        this.releaseDay = releaseDay;
-        this.creator = creator;
+        super(price, title, creator, releaseDay);
         this.publisher = publisher;
-        this.price = price;
+
     }
 
-    public String getTitle(){
-        return title; 
-    }
+    
 
-    public String getReleaseDay(){
-        return releaseDay; 
-    }
-
-    public Author getCreator(){
-        return creator;
-    }
-
-    public int getPublisher(){
+    public String getPublisher(){
         return publisher; 
     }
 
-    public double getPrice(){
-        return price;  
-    }
-
     public String getBday(){
-        return creator.getBday();
+        return getCreator().getBday();
     }
 }
